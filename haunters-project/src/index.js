@@ -1,20 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Student from './Student';
-//const divStyle = {
- //   color: 'red'
-//}
-const App = () => {
-    return (
-        <div className= "container">
-           <Student />
-           <Student />
-           <Student />
-           <Student />
-        </div>
-    );
-    
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
 
+import App from './components/app';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'))
