@@ -16,14 +16,15 @@ const NavBar = () => {
                     Booking
                 </Link>
                 <div className="right menu">
-                <Link to="/Media" className="item" style={{backgroundColor: 'lightGrey'}}>
+                <Link to="/media" className="item" style={{backgroundColor: 'lightGrey'}}>
                     Media
                 </Link>
-                    </div>
-                <div className="right menu">
-                <Link to="/AboutUs" className="item" style={{backgroundColor: 'lightGrey'}}>
+                    
+                    <div className="right menu">
+                <Link to="/aboutus" className="item" style={{backgroundColor: 'lightGrey'}}>
                     About Us
                 </Link>
+                </div>
                     </div>
                 </div>
             </div>
