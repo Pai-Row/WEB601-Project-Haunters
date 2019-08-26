@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< Updated upstream
 import ReactDOM from 'react-dom';
+=======
+import Student from '../../Student';
+>>>>>>> Stashed changes
 
 const Home = () => {
     return <div>
@@ -15,5 +19,8 @@ const Home = () => {
 }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 export default Home
