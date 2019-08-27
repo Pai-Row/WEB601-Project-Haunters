@@ -8,7 +8,7 @@ import Media from './pages/Media'
 import AboutUs from './pages/AboutUs'
 
 import NavBar  from './NavBar'
-
+import Footer from './footer/footer';
 
 
 
