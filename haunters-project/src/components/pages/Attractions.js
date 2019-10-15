@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 const Attractions = () => {
     return <div>
          <div className="banner-ui" >
-          <img className="banner-image" src="haunters-project/src/images/Haunters.png" alt="Haunters Banner" />
+          <img className="banner-image" src=".\images\Haunters.png" alt="Haunters Banner" />
         </div>
         <h1> Attractions</h1>
         <h2>Haunted House</h2>

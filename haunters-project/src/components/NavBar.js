@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <div className="ui  pointing right menu" style={{backgroundColor: 'lightBlue'}}>
+        <div className="ui  pointing right menu" style={{backgroundColor: 'DarkBlue'}}>
             <Link to="/" className="item"  style={{backgroundColor: 'lightGrey'}}>
                 Home
             </Link>
