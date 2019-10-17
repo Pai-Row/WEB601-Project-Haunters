@@ -1,0 +1,15 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "projecthaunters",
+            "dialect": "MySQL",
+            "isActive": false,
+            "isConnected": false,
+            "name": "Local instance MySQL80",
+            "password": "sideduckmaster6",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}
