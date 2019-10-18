@@ -8,7 +8,7 @@ class Footer extends Component {    //page Footer with copyright information and
       <footer className="footer-ui">
         <div>
           <div className="copyright-ui">
-            <span classname="copyright-text">©2019 Haunters</span>
+            <span className="copyright-text">©2019 Haunters</span>
           </div>
           <div className="footer-sm-icons-ui" >
             <SocialIcon network="facebook" url="https://www.facebook.com" style={{ height: 26, width: 26 }} bgColor="#4d4d4d" />

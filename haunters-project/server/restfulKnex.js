@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
 const router = express.Router()
+const cors = require('cors')
 
 const config = require('./config')
 const data = require('./data')
@@ -38,7 +39,7 @@ router.get('/attraction', routes.attractionList.listAllAttractionKnex);
 /* Now we are going to use DELETE to remove an Booking from the table */
 //router.delete('/booking/:id', middlewares.checkID, routes.bookingList.deleteBooking)
 
-app.use('/api', router);
+app.use('/api', cors(), router);
 
 
 app.listen(config.APIServerPort, () => {
