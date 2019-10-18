@@ -8,7 +8,7 @@ const APIServerPort = 4200
 const database = {
     host: 'localhost',
     port: 3306,
-    user: 'root',
+    user: 'newuser',
     password: 'sideduckmaster6',
     database: 'projecthaunters',
     insecureAuth: true

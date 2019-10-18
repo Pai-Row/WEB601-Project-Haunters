@@ -31,16 +31,12 @@ const routes = require('./routes')
 
 
 
-// router.get('/employees', routes.employeesList.listAllEmployees); // This line is for mysql native package
-router.get('/employees', routes.employeesList.listAllEmployeesKnex);
-/* Here we are going to get a single employee by accessing id parameter */
-router.get('/employees/:id', middlewares.checkID, routes.employeesList.listSingleEmployee);
-/* Now we are going to POST to the employees list but we need to make sure to create a need record in db*/
-router.post('/employees', jsonParser, routes.employeesList.postEmployee);
-/* Now we are going to use PATCH to update employee data, so we need to create a handler function*/
-router.patch('/employees/:id', jsonParser, middlewares.checkID, routes.employeesList.updateEmployee)
-/* Now we are going to use DELETE to remove an employee from the table */
-router.delete('/employees/:id', middlewares.checkID, routes.employeesList.deleteEmployee)
+// router.get('/attraction', routes.attractionList.listAllAttraction); // This line is for mysql native package
+router.get('/attraction', routes.attractionList.listAllAttractionKnex);
+/* Now we are going to POST to the booking list but we need to make sure to create a need record in db*/
+//router.post('/booking', jsonParser, routes.bookingList.postBooking);
+/* Now we are going to use DELETE to remove an Booking from the table */
+//router.delete('/booking/:id', middlewares.checkID, routes.bookingList.deleteBooking)
 
 app.use('/api', router);
 
