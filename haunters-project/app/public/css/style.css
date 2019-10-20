@@ -8,6 +8,11 @@ body {
   width: 300px;
 }
 
+.banner-image {
+  height:300px;
+  width: 1555px;
+
+}
 #booking {
   justify-content: space-evenly;
   display: flex;
