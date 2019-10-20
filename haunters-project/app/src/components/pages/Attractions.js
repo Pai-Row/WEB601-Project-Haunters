@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import DBAttractionTile from '../dbAttractionTile'
+
 export default class Attractions extends React.Component {
 
   constructor(props) {

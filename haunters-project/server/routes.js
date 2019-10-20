@@ -20,10 +20,10 @@
 /* ------------------------------------------------------------------------------------------------------------------- */
 
 // inside routes we are going to call employee by using require. This employees controller
-const attractionList = require('./attractionsKnex.js')
+const haunterList = require('./hauntersKnex.js')
 // Then we can departments controller 
 // Homework
 // Then we are going to export employeesList
 module.exports = {
-    attractionList
+    haunterList
 }

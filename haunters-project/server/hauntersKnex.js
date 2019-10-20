@@ -65,7 +65,7 @@ function deleteBooking(req, res) {
 
 module.exports = {
     listAllAttractionKnex,
-    //postBooking,
-   // updateBooking,
-    //deleteBooking
+    postBooking,
+    deleteBooking
+    //updateBooking
 }

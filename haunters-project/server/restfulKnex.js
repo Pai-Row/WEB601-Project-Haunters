@@ -30,14 +30,14 @@ app.locals.knex = knex
 /*  We are going to require routes */
 const routes = require('./routes')
 
+// router.get('/attraction', routes.haunterList.listAllAttraction); // This line is for mysql native package
+router.get('/attraction', routes.haunterList.listAllAttractionKnex);
 
-
-// router.get('/attraction', routes.attractionList.listAllAttraction); // This line is for mysql native package
-router.get('/attraction', routes.attractionList.listAllAttractionKnex);
 /* Now we are going to POST to the booking list but we need to make sure to create a need record in db*/
-//router.post('/booking', jsonParser, routes.bookingList.postBooking);
+router.post('/booking', jsonParser, routes.haunterList.postBooking);
+
 /* Now we are going to use DELETE to remove an Booking from the table */
-//router.delete('/booking/:id', middlewares.checkID, routes.bookingList.deleteBooking)
+router.delete('/booking/:id', middlewares.checkID, routes.haunterList.deleteBooking)
 
 app.use('/api', cors(), router);
 
