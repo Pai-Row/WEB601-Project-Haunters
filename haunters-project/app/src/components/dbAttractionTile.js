@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // This component displays a tile for each attraction in the database on the Attractions page
 // Uses map to map each item from the attraction array to a "tile" and displays the corresponding information in each tile
-// Gets passed the attraction array from the DBReadBooks component as a prop
+// Gets passed the attraction array from the DBAttractionTile component as a prop
 
 export default class DBAttractionTile extends React.Component {
 

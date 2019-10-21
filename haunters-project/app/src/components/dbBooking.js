@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-// This component displays a tile for each attraction in the database on the Attractions page
-// Uses map to map each item from the attraction array to a "tile" and displays the corresponding information in each tile
-// Gets passed the attraction array from the DBReadBooks component as a prop
-
 export default class dbBooking extends React.Component {
 
     constructor() {
@@ -14,7 +9,7 @@ export default class dbBooking extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
     }
 
-      // Handles the submission of the add book form and adds it to the database
+      // Handles the submission of booking details and put it in the database
     handleSubmit(event) {
         event.preventDefault();
         fetch('http://localhost:4200/api/booking', {
@@ -59,7 +54,6 @@ export default class dbBooking extends React.Component {
         })	
     }
 
-    // Maps out each attraction in the array attractions and displays a tile for it
     render() {
         return(
         <div id="form_container">

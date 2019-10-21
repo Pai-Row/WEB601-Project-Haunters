@@ -16,6 +16,7 @@ function listAllAttractionKnex(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+//Get the latest booking with the last ID
 function getLastBooking(req, res) {
     const {
         knex
