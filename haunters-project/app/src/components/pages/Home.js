@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 
 const Home = () => {
     return <div>
-        <div className="banner-ui" >
-          <img className="banner-image" src=".\images\Haunters.png" alt="Haunters Banner" />
-        </div>
         <center><h1>Haunters</h1></center>
         <center><p>Welcome to Haunters!</p></center>
         <center><p>A frightenly wonderful way to spend your evening...</p></center>

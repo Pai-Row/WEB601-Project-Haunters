@@ -19,3 +19,18 @@ body {
   flex-direction: column;
   height: 500px;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 26px;
+}
+
+.submitButton {
+  width: 106px;
+}
+
+.deleteButton {
+  width: 106px;
+}

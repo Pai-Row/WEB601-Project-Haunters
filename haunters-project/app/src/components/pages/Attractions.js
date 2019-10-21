@@ -43,9 +43,6 @@ componentDidMount() {
     render() {
       return (
         <div>
-          <div className="banner-ui" >
-            <img className="banner-image" src=".\images\Haunters.png" alt="Haunters Banner" />
-          </div>
           <h1> Attractions</h1>
           <DBAttractionTile Attractions={this.state.Attractions}/>
 

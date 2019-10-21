@@ -15,9 +15,6 @@ export default class Booking extends React.Component {
     render() {
       return (
         <div>
-          <div className="banner-ui" >
-            <img className="banner-image" src=".\images\Haunters.png" alt="Haunters Banner" />
-          </div>
           <DBBooking />
 
           {/*<h2>Haunted House</h2>

@@ -12,9 +12,6 @@ export default class dbBooking extends React.Component {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
-        this.state = ({
-            // submitted: false
-         })
     }
 
       // Handles the submission of the add book form and adds it to the database
@@ -34,7 +31,6 @@ export default class dbBooking extends React.Component {
              "country": this.country.value
             })}).then(function (response) {
                 console.log(response);
-                // this.state.submitted = true;
             }).catch(function (err){
                 console.log(err)
             });
@@ -42,16 +38,25 @@ export default class dbBooking extends React.Component {
     }
 
     handleDelete () {
-        fetch('http://localhost:4200/api/booking/1', {
+        fetch('http://localhost:4200/api/booking/last')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data[0].ID)
+            var latestBookingID = data[0].ID
+
+            fetch(`http://localhost:4200/api/booking/${latestBookingID}`, {
             method: 'delete',
             headers: {'Content-Type':'application/json'},
             }).then(function (response) {
                 console.log(response);
-                // this.state.submitted = true;
             }).catch(function (err){
                 console.log(err)
             });
-        console.log("Sometihng was deleted");
+            console.log("Sometihng was deleted");
+        })
+        .catch(err => {
+            console.log(err)
+        })	
     }
 
     // Maps out each attraction in the array attractions and displays a tile for it
@@ -60,66 +65,74 @@ export default class dbBooking extends React.Component {
         <div id="form_container">
 	
 		<h1><a>Booking</a></h1>
+        <br></br>
+        <br></br>
 		<form id="booking" onSubmit={this.handleSubmit}>
             <div class="form_description">
-                <h2>Booking</h2>
-                <p>Booking for customers</p>
 		    </div>						
 
             <label>
+                <p>Date</p>
                 <input ref={(ref) => {this.date = ref}} type="date" name="date"/>
             </label>
 
             <label>
+                <br></br>
                 <input name="attraction" checked="true" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Double Haunt"/>
                  Double Haunt $20 - Entry into two attractions of your choice
             </label>
 
             <label>
+            <br></br>
                 <input name="attraction" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Haunters Hearty Haunt"/>
                  Haunters Hearty Haunt $40 - All attractions and a group photo
             </label>
             
             <label>
+            <br></br>
                 <input name="attraction" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Haunters Sinister Haunt"/>
                  Haunters Sinister Haunt $60 - Includes all attractions, a group photo and an exlusive Haunters Halloween outfit
             </label>
 
             <label>
+                 <p>Quantity</p>
                 <input name="quantity" type="number" required="true" ref={(ref) => {this.quantity = ref}}/>
-                 Quantity
             </label>
 			
 			<label>
+                <p>First</p>
                 <input name="firstName" type="text" required="true" ref={(ref) => {this.firstname = ref}}/>
-                First
             </label>
 			
 			<label>
+                <p>Last</p>
                 <input name="lastName" type="text" required="true" ref={(ref) => {this.lastname = ref}}/>
-                Last
             </label>
+
             <label>
+                <p>Email</p>
                 <input name="email" type="email" required="true" maxlength="255" ref={(ref) => {this.email = ref}}/>
-                Email
             </label>
                 
             <label>
+                <p>Phone Number</p>
                 <input name="phone" type="text" ref={(ref) => {this.phone = ref}}/> 
-                Phone Number
             </label>
                 
             <label>
+                <p>Country</p>
                 <input name="country" type="text" required="true" ref={(ref) => {this.country = ref}}/> 
-                Country
+                <br></br>
             </label>
 			
-            <input type="submit" name="submit" value="Submit" />
-		</form>	
+            <input className="submitButton" type="submit" name="submit" value="Submit" />
+		
         <button onClick={this.handleDelete}>
             Delete Booking
         </button>
+        </form>	
 	</div>
+    
         )
     }
 }

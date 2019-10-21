@@ -33,6 +33,8 @@ const routes = require('./routes')
 // router.get('/attraction', routes.haunterList.listAllAttraction); // This line is for mysql native package
 router.get('/attraction', routes.haunterList.listAllAttractionKnex);
 
+router.get('/booking/last', routes.haunterList.getLastBooking);
+
 /* Now we are going to POST to the booking list but we need to make sure to create a need record in db*/
 router.post('/booking', jsonParser, routes.haunterList.postBooking);
 

@@ -16,6 +16,16 @@ function listAllAttractionKnex(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+function getLastBooking(req, res) {
+    const {
+        knex
+    } = req.app.locals
+    knex.select('ID').orderBy('ID', 'desc').from('booking').limit(1)
+        /*We going to use a promise based lib */
+        .then(data => res.status(200).json(data))
+        .catch(error => res.status(500).json(error))
+}
+
 
 //This will be the booking details posting the information back to the datebase
 function postBooking(req, res) {
@@ -66,6 +76,7 @@ function deleteBooking(req, res) {
 module.exports = {
     listAllAttractionKnex,
     postBooking,
-    deleteBooking
+    deleteBooking,
+    getLastBooking
     //updateBooking
 }
