@@ -7,6 +7,10 @@ export default class dbBooking extends React.Component {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.state = ({
+            submitted: false,
+            deleted: false
+        })
     }
 
       // Handles the submission of booking details and put it in the database
@@ -30,6 +34,11 @@ export default class dbBooking extends React.Component {
                 console.log(err)
             });
         console.log("Booking added");
+        var form = document.getElementById("booking");
+        form.reset();
+        this.setState({
+            submitted: true
+        })
     }
 
     handleDelete () {
@@ -51,83 +60,94 @@ export default class dbBooking extends React.Component {
         })
         .catch(err => {
             console.log(err)
+        })
+        this.setState({
+            deleted: true
         })	
     }
 
     render() {
+        const hasBeenSubmitted = this.state.submitted;
+        const hasBeenDeleted = this.state.deleted;
         return(
         <div id="form_container">
-	
+
     <div className="myheader"><center><h1><a>Booking</a></h1></center></div>
         <br></br>
         <br></br>
-		<form id="booking" onSubmit={this.handleSubmit}>
-            <div class="form_description">
-		    </div>						
-
+		
+        <form id="booking" onSubmit={this.handleSubmit}>			
+            <p>Date</p>
             <label>
-                <p>Date</p>
                 <input ref={(ref) => {this.date = ref}} type="date" name="date"/>
             </label>
 
+            <p>Ticket Type</p>
             <label>
-                <br></br>
-                <p>Ticket Type</p>
                 <input name="attraction" checked="true" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Double Haunt"/>
                  Double Haunt $20 - Entry into two attractions of your choice
             </label>
 
             <label>
-            <br></br>
                 <input name="attraction" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Haunters Hearty Haunt"/>
                  Haunters Hearty Haunt $40 - All attractions and a group photo
             </label>
             
             <label>
-            <br></br>
                 <input name="attraction" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Haunters Sinister Haunt"/>
                  Haunters Sinister Haunt $60 - Includes all attractions, a group photo and an exlusive Haunters Halloween outfit
             </label>
 
+            <p>Quantity</p>
             <label>
-                 <p>Quantity</p>
                 <input name="quantity" type="number" required="true" ref={(ref) => {this.quantity = ref}}/>
             </label>
 			
+            <p>First name</p>
 			<label>
-                <p>First name</p>
                 <input name="firstName" type="text" required="true" ref={(ref) => {this.firstname = ref}}/>
             </label>
 			
+            <p>Last name</p>
 			<label>
-                <p>Last name</p>
                 <input name="lastName" type="text" required="true" ref={(ref) => {this.lastname = ref}}/>
             </label>
 
+            <p>Email</p>
             <label>
-                <p>Email</p>
                 <input name="email" type="email" required="true" maxlength="255" ref={(ref) => {this.email = ref}}/>
             </label>
-                
+            
+            <p>Phone Number</p>
             <label>
-                <p>Phone Number</p>
                 <input name="phone" type="text" ref={(ref) => {this.phone = ref}}/> 
             </label>
-                
+
+           <p>Country</p>     
             <label>
-                <p>Country</p>
                 <input name="country" type="text" required="true" ref={(ref) => {this.country = ref}}/> 
                 <br></br>
             </label>
-		
+
+            {hasBeenSubmitted === true &&
+            <h2>
+            Booking Submitted
+            </h2>
+            }
+
+            {hasBeenDeleted === true &&
+            <h2>
+            Booking Deleted
+            </h2>
+            }
+            <div className="buttons">
             <input className="submitButton" type="submit" name="submit" value="Submit"/> 
-		
-        <button onClick={this.handleDelete}>
-            Delete Booking
-        </button>
+            <button className="deleteButton" onClick={this.handleDelete}>
+                Delete Booking
+            </button>
+            </div>
         </form>	
 	</div>
-    
         )
     }
 }

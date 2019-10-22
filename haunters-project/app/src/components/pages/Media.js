@@ -12,6 +12,30 @@ const Media = () => {
 
 }
 
+/*export default class Media extends React.Component {
+
+    constructor() {
+        super();
+        this.state = ({
+            isOpen: false,
+            onClose: false,
+            onClickNext: null,
+            onClickPrev: null
+        })
+    }
+
+    render() {
+      return (
+        <Lightbox
+          images={[{ src: 'http://example.com/img1.jpg' }, { src: 'http://example.com/img2.jpg' }]}
+          isOpen={this.state.lightboxIsOpen}
+          onClickPrev={this.gotoPrevious}
+          onClickNext={this.gotoNext}
+          onClose={this.closeLightbox}
+        />
+      );
+    }
+  }*/
 
           
           
