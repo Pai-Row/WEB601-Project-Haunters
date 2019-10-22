@@ -77,12 +77,12 @@ export default class dbBooking extends React.Component {
         <br></br>
 		
         <form id="booking" onSubmit={this.handleSubmit}>			
-            <p>Date</p>
+            Date
             <label>
                 <input ref={(ref) => {this.date = ref}} type="date" name="date"/>
-            </label>
+            </label><br/>
 
-            <p>Ticket Type</p>
+            Ticket Type
             <label>
                 <input name="attraction" checked="true" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Double Haunt"/>
                  Double Haunt $20 - Entry into two attractions of your choice
@@ -97,33 +97,33 @@ export default class dbBooking extends React.Component {
                 <input name="attraction" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Haunters Sinister Haunt"/>
                  Haunters Sinister Haunt $60 - Includes all attractions, a group photo and an exlusive Haunters Halloween outfit
             </label>
-
-            <p>Quantity</p>
+            <br/>
+            Quantity
             <label>
                 <input name="quantity" type="number" required="true" ref={(ref) => {this.quantity = ref}}/>
             </label>
 			
-            <p>First name</p>
+            First name
 			<label>
                 <input name="firstName" type="text" required="true" ref={(ref) => {this.firstname = ref}}/>
             </label>
 			
-            <p>Last name</p>
+            Last name
 			<label>
                 <input name="lastName" type="text" required="true" ref={(ref) => {this.lastname = ref}}/>
             </label>
 
-            <p>Email</p>
+            Email
             <label>
                 <input name="email" type="email" required="true" maxlength="255" ref={(ref) => {this.email = ref}}/>
             </label>
             
-            <p>Phone Number</p>
+            Phone Number
             <label>
                 <input name="phone" type="text" ref={(ref) => {this.phone = ref}}/> 
             </label>
 
-           <p>Country</p>     
+           Country     
             <label>
                 <input name="country" type="text" required="true" ref={(ref) => {this.country = ref}}/> 
                 <br></br>
