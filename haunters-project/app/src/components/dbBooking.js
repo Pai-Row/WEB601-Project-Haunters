@@ -58,7 +58,7 @@ export default class dbBooking extends React.Component {
         return(
         <div id="form_container">
 	
-		<h1><a>Booking</a></h1>
+    <div className="myheader"><center><h1><a>Booking</a></h1></center></div>
         <br></br>
         <br></br>
 		<form id="booking" onSubmit={this.handleSubmit}>

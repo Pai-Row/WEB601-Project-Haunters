@@ -43,7 +43,7 @@ componentDidMount() {
     render() {
       return (
         <div>
-          <h1> Attractions</h1>
+           <div className="myheader"><center><h1> Attractions</h1></center></div>
           <DBAttractionTile Attractions={this.state.Attractions}/>
 
           {/*<h2>Haunted House</h2>

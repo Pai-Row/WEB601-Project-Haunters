@@ -1,3 +1,7 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+
+
 body {
   background-color: black;
   color: ghostwhite;
@@ -9,10 +13,17 @@ body {
 }
 
 .banner-image {
-  height:300px;
-  width: 1555px;
+  height:500px;
+  width: 1500px;
+}
+
+.myheader {
+color: mediumblue;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-size: 50px;
 
 }
+
 #booking {
   justify-content: space-evenly;
   display: flex;
@@ -25,6 +36,8 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   font-size: 26px;
+  color: blue;
+  
 }
 
 .submitButton {

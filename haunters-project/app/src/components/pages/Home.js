@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 
 const Home = () => {
     return <div>
-        <center><h1>Haunters</h1></center>
+        <div className="myheader"><center><h1>Haunters</h1></center>
+        </div>
         <center><p>Welcome to Haunters!</p></center>
         <center><p>A frightenly wonderful way to spend your evening...</p></center>
         <br></br>
