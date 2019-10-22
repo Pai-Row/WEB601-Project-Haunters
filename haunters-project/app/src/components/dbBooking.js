@@ -72,6 +72,7 @@ export default class dbBooking extends React.Component {
 
             <label>
                 <br></br>
+                <p>Ticket Type</p>
                 <input name="attraction" checked="true" class="element radio" type="radio" required="true" ref={(ref) => {this.attraction = ref}} value="Double Haunt"/>
                  Double Haunt $20 - Entry into two attractions of your choice
             </label>
