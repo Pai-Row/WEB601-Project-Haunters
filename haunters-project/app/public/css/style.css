@@ -1,6 +1,7 @@
 /*font*/
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 .banner-image {
   height:500px;
@@ -9,7 +10,7 @@
 
 .myheader {
   color: rgb(31, 85, 187);
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 50px;
   }
 
@@ -43,6 +44,20 @@ p{
   width: 300px;
 }
 
+.Haunted-House {
+  height: 500px;
+  width: 300px;
+}
+
+.Haunted-Forest {
+  height: 300px;
+  width: 500px;
+}
+
+.MirrorRoom {
+  height: 300px;
+  width: 500px;
+}
 .right menu {
   color: blue;
 }
@@ -65,7 +80,7 @@ p{
   font-size: 40px;
   color: blue;
   background-color: darkblue;
-  
+
   
 }
 
