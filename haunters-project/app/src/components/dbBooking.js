@@ -94,12 +94,12 @@ export default class dbBooking extends React.Component {
             </label>
 			
 			<label>
-                <p>First</p>
+                <p>First name</p>
                 <input name="firstName" type="text" required="true" ref={(ref) => {this.firstname = ref}}/>
             </label>
 			
 			<label>
-                <p>Last</p>
+                <p>Last name</p>
                 <input name="lastName" type="text" required="true" ref={(ref) => {this.lastname = ref}}/>
             </label>
 
@@ -118,8 +118,8 @@ export default class dbBooking extends React.Component {
                 <input name="country" type="text" required="true" ref={(ref) => {this.country = ref}}/> 
                 <br></br>
             </label>
-			
-            <input className="submitButton" type="submit" name="submit" value="Submit" />
+		
+            <input className="submitButton" type="submit" name="submit" value="Submit"/> 
 		
         <button onClick={this.handleDelete}>
             Delete Booking

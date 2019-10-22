@@ -1,10 +1,13 @@
 /*font*/
-@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 
 body {
   background-color: black;
   color: ghostwhite;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
 }
 
 .image-medium {
@@ -19,9 +22,12 @@ body {
 
 .myheader {
 color: mediumblue;
-font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'Amatic SC', cursive;
 font-size: 50px;
+}
 
+.right menu {
+  color: blue;
 }
 
 #booking {
@@ -35,7 +41,7 @@ font-size: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 26px;
+  font-size: 40px;
   color: blue;
   
 }
