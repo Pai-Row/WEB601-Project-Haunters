@@ -14,9 +14,10 @@ return (
 <>
 <div className="myheader"><center><h1>Media</h1></center>
 </div>
-<button onClick={ () => setToggler(!toggler) }>
-Gallery
-</button>
+
+<center>
+  <button className="GalleryButton" onClick={ () => setToggler(!toggler) }>Gallery</button>
+</center>
 <FsLightbox
 toggler={ toggler }
 sources={ [

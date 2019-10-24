@@ -72,7 +72,7 @@ export default class dbBooking extends React.Component {
         return(
         <div id="form_container">
 
-    <div className="myheader"><center><h1><a>Booking</a></h1></center></div>
+    <div className="myheader"><center><h1>Booking</h1></center></div>
         <br></br>
         <br></br>
 		
