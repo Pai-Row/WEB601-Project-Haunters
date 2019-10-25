@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 const AboutUs = () => {
     return <div>
         <div className="myheader"><center><h1>About Us</h1></center></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies metus urna, vitae interdum sapien blandit tincidunt. Donec tincidunt condimentum purus, ac hendrerit nisi venenatis eget. Aliquam nec justo in tellus aliquam pretium sit amet eget dui. In blandit mauris eget ligula tempor, eu volutpat dolor consectetur. Donec tempus urna quis sem pulvinar, et posuere sem volutpat. Vivamus id pharetra sem, a molestie libero. Suspendisse potenti. Praesent et orci ut felis cursus lobortis. Curabitur ut dapibus lorem. Quisque dapibus, sapien id tincidunt aliquam, tellus lorem iaculis ante, in vestibulum felis turpis a nisi.</p>
+        <p></p>
         <h2>Contact the Otherside</h2>
+        <p>Haunters</p>
         <h2>Directions</h2>
+        <p>Address: 300 Nghawhatu Road, Stoke, Nelson 7011, NZ<br/>Phone: +64 36265696</p>
         <h2>F.A.Q</h2>
         </div>
 }
