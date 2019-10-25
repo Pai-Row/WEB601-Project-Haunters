@@ -9,6 +9,8 @@ const AboutUs = () => {
         <h2>Directions</h2>
         <p>Address: 300 Nghawhatu Road, Stoke, Nelson 7011, NZ<br/>Phone: +64 36265696</p>
         <h2>F.A.Q</h2>
+        <p>Faint of Heart<br/>If you get too scared during your advnetures with us you will not recieve a refund however we can escort you through safely to end your experience if deemed appropriate.</p>
+        <p></p>
         </div>
 }
 
