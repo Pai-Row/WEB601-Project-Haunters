@@ -11,11 +11,10 @@ const Home = () => {
         <br></br>
         <div className="content-image" >
          <center><img className="image-medium" src=".\images\House.jpg" alt="Haunters House" /></center>
-          </div>
+          </div><br/>
         <center>Haunters is a newly opened horror theme attraction park filled to the brim with frights and fun... <br/>If you love to be scared or are just looking for something different and unqiue then come on in and give us a visit<br/> the temperature is chilling...</center>
 
-        
-        </div>
+</div>
 }
 
 ReactDOM.render(<Home />,document.querySelector('#root'));

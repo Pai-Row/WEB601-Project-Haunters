@@ -45,10 +45,13 @@ componentDidMount() {
         <div>
            <div className="myheader"><center><h1>Attractions</h1></center></div>
           <DBAttractionTile Attractions={this.state.Attractions}/>
+          
           <div className="Haunted-House">
           <img className="Haunted-House" src=".\images\Haunted House.jpg" alt="Haunted House"/></div>
+
           <div className="Haunted-Forest">
           <img className="Haunted-Forest" src=".\images\Haunted Forest.jpg" alt="Haunted Forest"/></div>
+
           <div className="MirrorRoom">
           <img className="MirrorRoom" src=".\images\MirrorRoom.jpg" alt="MirrorRoom"/></div>
         </div>

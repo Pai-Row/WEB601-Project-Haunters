@@ -34,8 +34,12 @@ const NavBar = () => {
                     </Link>
                 </div>
             </div>
+            
         </div>
+        
     )
 }
+
+
 
 export default NavBar; 
