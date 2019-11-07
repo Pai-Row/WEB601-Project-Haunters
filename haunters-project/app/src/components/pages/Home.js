@@ -6,6 +6,7 @@ const Home = () => {
     return <div>
         <div className="myheader"><center><h1>Haunters</h1></center>
         </div>
+        <img className="background-image" src=".\images\Background.jpg" alt="Haunters Banner" />
         <center>Welcome to Haunters!</center>
         <center>A frightenly wonderful way to spend your evening...</center>
         <br></br>

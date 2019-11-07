@@ -14,6 +14,7 @@ return (
 <>
 <div className="myheader"><center><h1>Media</h1></center>
 </div>
+<img className="background-image" src=".\images\Background.jpg" alt="Haunters Banner" />
 
 <center>
   <button className="GalleryButton" onClick={ () => setToggler(!toggler) }>Gallery</button>
