@@ -1,16 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
-import Myform from '../myForm';
+import MyForm from '../myForm'
+
 const AboutUs = () => {
     return <div>
         <div className="myheader"><center><h1>About Us</h1></center></div>
         
         {/* Contact Form */}
         <h2>Contact the Otherside</h2>
+        <MyForm />
         
-        <myForm/>
-        
-
         {/* Map */}
         <div className = "Map"><h2>Directions</h2>
         <div class="mapouter"><div class="gmap_canvas"><iframe width="604" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=300%20Montobello%20Avenue&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
@@ -37,7 +35,7 @@ const AboutUs = () => {
                 <p>Yes! We have candy, snacks, popcorn and a range of fizzy drinks available at the Haunters Café! The function room can seat 66 people for full meals and birthday parties!</p>
             <h4>Do you do discounts?</h4>
                 <p>Yes! If you book online with us you will receive a 10% discount for each ticket purchase</p>
-            <h4>Is there any restricted areas?</h4>
+            <h4>Are there any restricted areas?</h4>
                 <p>There are a few locked rooms that are not meant to be entered. These are usually staff only or we have deemed them too unsafe to use for the time being. We look forward to having all rooms accessible in the future when we can verify that they are safe to operate in.</p>
             <h4>How long does a visit to Haunters last?</h4>
                 <p>Haunters House takes roughly 40 minutes to complete<br></br>

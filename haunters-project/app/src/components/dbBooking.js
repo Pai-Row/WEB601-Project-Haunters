@@ -35,6 +35,7 @@ export default class dbBooking extends React.Component {
             }).catch(function (err){
                 console.log(err)
             });
+        this.notifyA.call()
         console.log("Booking added");
         var form = document.getElementById("booking");
         form.reset();
@@ -59,6 +60,7 @@ export default class dbBooking extends React.Component {
                 console.log(err)
             });
             console.log("Sometihng was deleted");
+            this.notifyB.call();
         })
         .catch(err => {
             console.log(err)
@@ -68,11 +70,15 @@ export default class dbBooking extends React.Component {
         })	
     }
 
+    notifyA = () => toast.info('Booking Added', {containerId: 'A'});
+    notifyB = () => toast.error('Booking Deleted', {containerId: 'B'});
     render() {
-        const hasBeenSubmitted = this.state.submitted;
-        const hasBeenDeleted = this.state.deleted;
+        // const hasBeenSubmitted = this.state.submitted;
+        // const hasBeenDeleted = this.state.deleted;
         return(
         <div id="form_container">
+        <ToastContainer enableMultiContainer containerId={'A'} position={toast.POSITION.BOTTOM_LEFT} />
+        <ToastContainer enableMultiContainer containerId={'B'} position={toast.POSITION.BOTTOM_LEFT} />
 
     <div className="myheader"><center><h1>Booking</h1></center></div>
         <br></br>
@@ -131,7 +137,7 @@ export default class dbBooking extends React.Component {
                 <br></br>
             </label>
 
-            {hasBeenSubmitted === true &&
+            {/* {hasBeenSubmitted === true &&
             <h2>
             Booking Submitted
             </h2>
@@ -141,8 +147,7 @@ export default class dbBooking extends React.Component {
             <h2>
             Booking Deleted
             </h2>
-            }
-            <ToastContainer />
+            } */}
             <div className="buttons">
             <input className="submitButton" type="submit" name="submit" value="Submit"/> 
             <button className="deleteButton" onClick={this.handleDelete}>
