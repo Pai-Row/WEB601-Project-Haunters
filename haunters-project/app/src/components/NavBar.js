@@ -34,7 +34,7 @@ const NavBar = () => {
                     </Link>
                 </div>
             </div>
-            
+            <img className="background-image" src=".\images\Background.jpg" alt="Haunters Banner" />
         </div>
         
     )

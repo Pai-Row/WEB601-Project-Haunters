@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class dbBooking extends React.Component {
 
@@ -140,6 +142,7 @@ export default class dbBooking extends React.Component {
             Booking Deleted
             </h2>
             }
+            <ToastContainer />
             <div className="buttons">
             <input className="submitButton" type="submit" name="submit" value="Submit"/> 
             <button className="deleteButton" onClick={this.handleDelete}>
