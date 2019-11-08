@@ -26,8 +26,8 @@ export default class MyForm extends React.Component {
         <input type="text" name="country"/>
         <label>Message</label>
         <input type="textarea" name="message"/>
-        {status === "SUCCESS" ? <p>Message received</p> : <button>Submit</button>}
-        {status === "ERROR" && <p>Uh oh! Contact could't be made.</p>}
+        {status === "SUCCESS" ? <p>Message received</p> : <div className="buttons"><button>Submit</button></div>}
+        {status === "ERROR" && <p>Failed to make contact.</p>}
         </div>
       </form>
       

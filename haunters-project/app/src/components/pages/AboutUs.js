@@ -6,8 +6,10 @@ const AboutUs = () => {
         <div className="myheader"><center><h1>About Us</h1></center></div>
         
         {/* Contact Form */}
+        <div className="myform">
         <h2>Contact the Otherside</h2>
         <MyForm />
+        </div>
         
         {/* Map */}
         <div className = "Map"><h2>Directions</h2>
