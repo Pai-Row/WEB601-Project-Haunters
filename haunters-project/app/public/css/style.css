@@ -112,6 +112,14 @@ a:hover{
   font-size: 40px;
   color: blue;
   background-color: midnightblue;
+  flex: 1;
+}
+
+@media all and (max-width: 500px) {  
+.right menu{
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
 }
 
 .submitButton {

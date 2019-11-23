@@ -33,6 +33,7 @@ const NavBar = () => {
                         About Us
                     </Link>
                 </div>
+                
             </div>
            
         </div>
