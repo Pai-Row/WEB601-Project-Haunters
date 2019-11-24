@@ -1,4 +1,4 @@
-import { INCREMENT, DECREASE } from "./actionTypes";
+import { INCREMENT, DECREASE, SUCCESS, FAILED } from "./actionTypes";
 import { toast } from "react-toastify";
 
 export function incrementAction() {
@@ -6,7 +6,7 @@ export function incrementAction() {
     dispatch({
       type: INCREMENT
     });
-    toast.success("MY SUCCESS");
+    toast.success("Booking submitted");
   };
 }
 export function decreaseAction() {
@@ -14,6 +14,22 @@ export function decreaseAction() {
     dispatch({
       type: DECREASE
     });
-    toast.warn("DECREASE");
+    toast.warn("Booking deleted");
+  };
+}
+export function successAction() {
+  return function(dispatch) {
+    dispatch({
+      type: SUCCESS
+    });
+    toast.warn("SUCCESS");
+  };
+}
+export function failedAction() {
+  return function(dispatch) {
+    dispatch({
+      type: FAILED
+    });
+    toast.warn("FAILED");
   };
 }

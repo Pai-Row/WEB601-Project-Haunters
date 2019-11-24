@@ -1,9 +1,13 @@
 import React from 'react'
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default class dbBooking extends React.Component {
+import { incrementAction, decreaseAction } from "./actions/actions";
+
+// export default class dbBooking extends React.Component {
+class dbBooking extends React.Component {
 
     constructor() {
         super();
@@ -35,7 +39,6 @@ export default class dbBooking extends React.Component {
             }).catch(function (err){
                 console.log(err)
             });
-        this.notifyA.call()
         console.log("Booking added");
         var form = document.getElementById("booking");
         form.reset();
@@ -60,7 +63,6 @@ export default class dbBooking extends React.Component {
                 console.log(err)
             });
             console.log("Sometihng was deleted");
-            this.notifyB.call();
         })
         .catch(err => {
             console.log(err)
@@ -70,15 +72,12 @@ export default class dbBooking extends React.Component {
         })	
     }
 
-    notifyA = () => toast.info('Booking Added', {containerId: 'A'});
-    notifyB = () => toast.error('Booking Deleted', {containerId: 'B'});
     render() {
-        // const hasBeenSubmitted = this.state.submitted;
-        // const hasBeenDeleted = this.state.deleted;
+        const hasBeenSubmitted = this.state.submitted;
+        const hasBeenDeleted = this.state.deleted;
+        const { value, incrementAction, decreaseAction } = this.props;
         return(
         <div id="form_container">
-        <ToastContainer enableMultiContainer containerId={'A'} position={toast.POSITION.BOTTOM_LEFT} />
-        <ToastContainer enableMultiContainer containerId={'B'} position={toast.POSITION.BOTTOM_LEFT} />
 
     <div className="myheader"><center><h1>Booking</h1></center></div>
         <br></br>
@@ -148,10 +147,11 @@ export default class dbBooking extends React.Component {
             Booking Deleted
             </h2>
             } */}
+            <ToastContainer />
             <div className="buttons">
-            <input className="submitButton" type="submit" name="submit" value="Submit"/> 
+            <input className="submitButton" type="submit" name="submit" value="Submit" onClick={incrementAction}/> 
             <button className="deleteButton" onClick={this.handleDelete}>
-                Delete Booking
+                <span onClick={decreaseAction}>Delete Booking</span>
             </button>
             </div>
         </form>	
@@ -159,3 +159,18 @@ export default class dbBooking extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    value: state.value,
+    submitted: state.submitted
+  });
+  
+  const mapDispatchToProps = dispatch => ({
+    incrementAction: () => dispatch(incrementAction()),
+    decreaseAction: () => dispatch(decreaseAction())
+  });
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(dbBooking);

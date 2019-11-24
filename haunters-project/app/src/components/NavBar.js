@@ -7,7 +7,7 @@ const NavBar = () => {
             <div className="banner-ui" >
                 <img className="banner-image" src=".\images\Haunters.png" alt="Haunters Banner" />
             </div>
-            <div className="navbar">
+            <nav className="navbar" >
                 <div className="right menu" style={{backgroundColor: 'Dark'}}>
                     <Link to="/" className="item"  style={{backgroundColor: 'Dark'}}>
                         Home
@@ -33,11 +33,13 @@ const NavBar = () => {
                         About Us
                     </Link>
                 </div>
-                
-            </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
            
         </div>
-        
+       
     )
 }
 

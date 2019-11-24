@@ -92,6 +92,7 @@ a:hover{
 
 .right menu {
   color: blue;
+  display: flex;
 }
 
 #booking {
@@ -107,12 +108,17 @@ a:hover{
 
 .navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   font-size: 40px;
   color: blue;
   background-color: midnightblue;
-  flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .right menu,
+  .navbar {
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 500px) {  
@@ -192,7 +198,6 @@ a:hover{
 .Map{
   margin-left: 700px;
   margin-top: -648px;
-  
 }
 
 .google-maps {
