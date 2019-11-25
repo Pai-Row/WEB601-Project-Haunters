@@ -6,7 +6,7 @@ export function incrementAction() {
     dispatch({
       type: INCREMENT
     });
-    toast.success("Booking submitted");
+    toast.info("Booking submitted");
   };
 }
 export function decreaseAction() {
@@ -14,7 +14,7 @@ export function decreaseAction() {
     dispatch({
       type: DECREASE
     });
-    toast.warn("Booking deleted");
+    toast.error("Booking deleted");
   };
 }
 export function successAction() {
